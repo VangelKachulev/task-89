@@ -25,7 +25,5 @@ export default class Application extends EventEmitter {
         };
         this.emit(Application.events.READY);
     }
-    _load() {
-        console.log(`haha`);
-    }
+  
 }

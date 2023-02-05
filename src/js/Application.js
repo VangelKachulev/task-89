@@ -52,8 +52,8 @@ export default class Application extends EventEmitter {
       const planetCollection = await response.json();
       next = planetCollection.next;
 
-  
       this.planets = [...this.planets, ...planetCollection.results];
+  
     }
 
     this._create();

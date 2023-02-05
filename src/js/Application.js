@@ -9,30 +9,18 @@ export default class Application extends EventEmitter {
 
     constructor() {
         super();
-        this._loading = document.getElementsByClassName('progress');
-        const main = document.getElementsByClassName('main');
 
-        this._load = async function() {
-            const planets = await fetch(`https://swapi.boom.dev/api/planets`);
-            
+        this._loading = document.querySelector('progress');
 
-        };
-        
-        this._create = function() {
-
-        };
-        this._startLoading = function() {
-
-        };
-        this._stopLoading = function() {
-
-        };
-        this._render = function() {
-
-        };
+        this._startLoading();
         this.emit(Application.events.READY);
-
     }
+    _startLoading() {
+        this._loading.style.visibility = 'visible';
+    }
+
+
+
 
 
 }
